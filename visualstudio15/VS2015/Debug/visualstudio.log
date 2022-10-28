@@ -1,0 +1,250 @@
+﻿  animation.cpp
+  camera.cpp
+  box.cpp
+  box_bld.cpp
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,109): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\camera.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,100): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\camera.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,91): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\camera.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,82): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\camera.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,109): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\animation.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,100): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\animation.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,91): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\animation.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,82): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\animation.cpp)
+  coldet.cpp
+  coldet_bld.cpp
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\animation.cpp(222,14): warning C4101: 'stbuffer': unreferenced local variable
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\extra\coldet\coldet.cpp(374,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  math3d.cpp
+  mytritri.cpp
+  sysdep.cpp
+  hdre.cpp
+  ImCurveEdit.cpp
+  ImGradient.cpp
+  imgui.cpp
+  ImGuizmo.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_opengl3.cpp
+  imgui_impl_sdl.cpp
+  imgui_widgets.cpp
+  ImSequencer.cpp
+  picopng.cpp
+  pvmparser.cpp
+  textparser.cpp
+  fbo.cpp
+  framework.cpp
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\extra\pvmparser.cpp(28,40): warning C4244: 'argument': conversion from 'const __int64' to 'size_t', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\extra\pvmparser.cpp(32,52): warning C4244: 'argument': conversion from '__int64' to 'size_t', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\extra\pvmparser.cpp(36,33): warning C4244: 'argument': conversion from 'const __int64' to 'size_t', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\extra\pvmparser.cpp(46,46): warning C4244: 'argument': conversion from '__int64' to 'size_t', possible loss of data
+  application.cpp
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,109): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\framework.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,100): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\framework.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,91): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\framework.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,82): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\framework.cpp)
+  input.cpp
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,109): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\fbo.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,100): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\fbo.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,91): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\fbo.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,82): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\fbo.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.cpp(1199,32): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  main.cpp
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,109): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\application.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,100): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\application.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,91): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\application.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,82): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\application.cpp)
+  material.cpp
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\application.cpp(67,33): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\application.cpp(93,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\application.cpp(94,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\application.cpp(97,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\application.cpp(177,34): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,109): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\input.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,100): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\input.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,91): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\input.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,82): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\input.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\input.cpp(138,24): warning C4244: '=': conversion from 'float' to 'char', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\input.cpp(146,19): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,109): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\material.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,100): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\material.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,91): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\material.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,82): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\material.cpp)
+  mesh.cpp
+  rendertotexture.cpp
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,109): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\mesh.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,100): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\mesh.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,91): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\mesh.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,82): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\mesh.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,109): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\main.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,100): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\main.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,91): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\main.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,82): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\main.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\main.cpp(142,46): warning C4244: '=': conversion from 'Sint32' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\main.cpp(184,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  scenenode.cpp
+  shader.cpp
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,109): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\rendertotexture.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,100): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\rendertotexture.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,91): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\rendertotexture.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,82): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\rendertotexture.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\mesh.cpp(1153,27): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\mesh.cpp(1154,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\mesh.cpp(1286,40): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\mesh.cpp(1286,25): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\mesh.cpp(1288,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\mesh.cpp(1288,31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\mesh.cpp(1289,31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\mesh.cpp(1296,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\mesh.cpp(1296,31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\mesh.cpp(1298,43): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\mesh.cpp(1311,30): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\mesh.cpp(1334,30): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,109): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\scenenode.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,100): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\scenenode.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,91): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\scenenode.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,82): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\scenenode.cpp)
+  texture.cpp
+  utils.cpp
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,109): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\texture.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,100): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\texture.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,91): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\texture.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,82): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\texture.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,109): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\shader.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,100): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\shader.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,91): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\shader.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,82): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\shader.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(18,51): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(18,9): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(19,56): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(19,9): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(24,15): warning C4018: '<': signed/unsigned mismatch
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(25,15): warning C4018: '<': signed/unsigned mismatch
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(32,55): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(32,9): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(33,57): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(33,9): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(38,15): warning C4018: '<': signed/unsigned mismatch
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(39,15): warning C4018: '<': signed/unsigned mismatch
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(208,125): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(311,94): warning C4244: 'argument': conversion from 'float' to 'GLsizei', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(311,87): warning C4244: 'argument': conversion from 'float' to 'GLsizei', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(332,102): warning C4244: 'argument': conversion from 'float' to 'GLsizei', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(332,94): warning C4244: 'argument': conversion from 'float' to 'GLsizei', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(332,87): warning C4244: 'argument': conversion from 'float' to 'GLsizei', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(358,111): warning C4244: 'argument': conversion from 'float' to 'GLsizei', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(358,104): warning C4244: 'argument': conversion from 'float' to 'GLsizei', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(538,18): warning C4244: '=': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(539,19): warning C4244: '=': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\texture.cpp(552,12): warning C4101: 'bytesPerPixel': unreferenced local variable
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\shader.cpp(185,20): warning C4018: '<': signed/unsigned mismatch
+  volume.cpp
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\shader.cpp(224,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,109): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\utils.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,100): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\utils.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,91): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\utils.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,82): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\utils.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\utils.cpp(334,56): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\utils.cpp(335,63): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\utils.cpp(360,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\utils.cpp(370,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\utils.cpp(392,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\utils.cpp(394,17): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\utils.cpp(407,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\utils.cpp(416,14): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\utils.cpp(456,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\utils.cpp(457,59): warning C4244: 'argument': conversion from '_Ty' to 'unsigned int', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\utils.cpp(457,44): warning C4244: 'argument': conversion from '_Ty' to 'unsigned int', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\utils.cpp(457,29): warning C4244: 'argument': conversion from '_Ty' to 'unsigned int', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\utils.cpp(467,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\utils.cpp(468,74): warning C4244: 'argument': conversion from '_Ty' to 'unsigned char', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\utils.cpp(468,59): warning C4244: 'argument': conversion from '_Ty' to 'unsigned char', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\utils.cpp(468,44): warning C4244: 'argument': conversion from '_Ty' to 'unsigned char', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\utils.cpp(468,29): warning C4244: 'argument': conversion from '_Ty' to 'unsigned char', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,109): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\volume.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,100): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\volume.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,91): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\volume.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\framework.h(177,82): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data (compiling source file ..\..\src\volume.cpp)
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\volume.cpp(67,34): warning C4552: '/': result of expression not used
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\volume.cpp(79,34): warning C4552: '/': result of expression not used
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\volume.cpp(219,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\volume.cpp(220,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\volume.cpp(221,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\volume.cpp(223,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\volume.cpp(224,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\volume.cpp(225,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\volume.cpp(227,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\volume.cpp(228,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\volume.cpp(237,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\volume.cpp(246,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\volume.cpp(247,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\volume.cpp(248,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\volume.cpp(249,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\volume.cpp(272,27): warning C4244: 'initializing': conversion from 'double' to 'unsigned int', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\volume.cpp(304,35): warning C4244: 'initializing': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\src\volume.cpp(323,13): warning C4244: 'initializing': conversion from 'float' to 'Uint8', possible loss of data
+  tritri.c
+animation.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+LINK : warning LNK4217: symbol '___glewActiveTexture' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"void __cdecl ImGui_ImplOpenGL3_RenderDrawData(struct ImDrawData *)" (?ImGui_ImplOpenGL3_RenderDrawData@@YAXPAUImDrawData@@@Z)'
+LINK : warning LNK4217: symbol '___glewBlendEquation' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"void __cdecl ImGui_ImplOpenGL3_SetupRenderState(struct ImDrawData *,int,int,unsigned int)" (?ImGui_ImplOpenGL3_SetupRenderState@@YAXPAUImDrawData@@HHI@Z)'
+LINK : warning LNK4217: symbol '___glewBlendFuncSeparate' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"void __cdecl ImGui_ImplOpenGL3_RenderDrawData(struct ImDrawData *)" (?ImGui_ImplOpenGL3_RenderDrawData@@YAXPAUImDrawData@@@Z)'
+LINK : warning LNK4217: symbol '___glewBindBuffer' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"bool __cdecl ImGui_ImplOpenGL3_CreateDeviceObjects(void)" (?ImGui_ImplOpenGL3_CreateDeviceObjects@@YA_NXZ)'
+LINK : warning LNK4217: symbol '___glewBufferData' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"void __cdecl ImGui_ImplOpenGL3_RenderDrawData(struct ImDrawData *)" (?ImGui_ImplOpenGL3_RenderDrawData@@YAXPAUImDrawData@@@Z)'
+LINK : warning LNK4217: symbol '___glewDeleteBuffers' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"void __cdecl ImGui_ImplOpenGL3_DestroyDeviceObjects(void)" (?ImGui_ImplOpenGL3_DestroyDeviceObjects@@YAXXZ)'
+LINK : warning LNK4217: symbol '___glewGenBuffers' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"bool __cdecl ImGui_ImplOpenGL3_CreateDeviceObjects(void)" (?ImGui_ImplOpenGL3_CreateDeviceObjects@@YA_NXZ)'
+LINK : warning LNK4217: symbol '___glewAttachShader' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"bool __cdecl ImGui_ImplOpenGL3_CreateDeviceObjects(void)" (?ImGui_ImplOpenGL3_CreateDeviceObjects@@YA_NXZ)'
+LINK : warning LNK4217: symbol '___glewBlendEquationSeparate' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"void __cdecl ImGui_ImplOpenGL3_RenderDrawData(struct ImDrawData *)" (?ImGui_ImplOpenGL3_RenderDrawData@@YAXPAUImDrawData@@@Z)'
+LINK : warning LNK4217: symbol '___glewCompileShader' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"bool __cdecl ImGui_ImplOpenGL3_CreateDeviceObjects(void)" (?ImGui_ImplOpenGL3_CreateDeviceObjects@@YA_NXZ)'
+LINK : warning LNK4217: symbol '___glewCreateProgram' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"bool __cdecl ImGui_ImplOpenGL3_CreateDeviceObjects(void)" (?ImGui_ImplOpenGL3_CreateDeviceObjects@@YA_NXZ)'
+LINK : warning LNK4217: symbol '___glewCreateShader' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"bool __cdecl ImGui_ImplOpenGL3_CreateDeviceObjects(void)" (?ImGui_ImplOpenGL3_CreateDeviceObjects@@YA_NXZ)'
+LINK : warning LNK4217: symbol '___glewDeleteProgram' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"void __cdecl ImGui_ImplOpenGL3_DestroyDeviceObjects(void)" (?ImGui_ImplOpenGL3_DestroyDeviceObjects@@YAXXZ)'
+LINK : warning LNK4217: symbol '___glewDeleteShader' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"void __cdecl ImGui_ImplOpenGL3_DestroyDeviceObjects(void)" (?ImGui_ImplOpenGL3_DestroyDeviceObjects@@YAXXZ)'
+LINK : warning LNK4217: symbol '___glewDetachShader' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"void __cdecl ImGui_ImplOpenGL3_DestroyDeviceObjects(void)" (?ImGui_ImplOpenGL3_DestroyDeviceObjects@@YAXXZ)'
+LINK : warning LNK4217: symbol '___glewEnableVertexAttribArray' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"void __cdecl ImGui_ImplOpenGL3_SetupRenderState(struct ImDrawData *,int,int,unsigned int)" (?ImGui_ImplOpenGL3_SetupRenderState@@YAXPAUImDrawData@@HHI@Z)'
+LINK : warning LNK4217: symbol '___glewGetAttribLocation' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"bool __cdecl ImGui_ImplOpenGL3_CreateDeviceObjects(void)" (?ImGui_ImplOpenGL3_CreateDeviceObjects@@YA_NXZ)'
+LINK : warning LNK4217: symbol '___glewGetProgramInfoLog' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"bool __cdecl CheckProgram(unsigned int,char const *)" (?CheckProgram@@YA_NIPBD@Z)'
+LINK : warning LNK4217: symbol '___glewGetProgramiv' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"bool __cdecl CheckProgram(unsigned int,char const *)" (?CheckProgram@@YA_NIPBD@Z)'
+LINK : warning LNK4217: symbol '___glewGetShaderInfoLog' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"bool __cdecl CheckShader(unsigned int,char const *)" (?CheckShader@@YA_NIPBD@Z)'
+LINK : warning LNK4217: symbol '___glewGetShaderiv' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"bool __cdecl CheckShader(unsigned int,char const *)" (?CheckShader@@YA_NIPBD@Z)'
+LINK : warning LNK4217: symbol '___glewGetUniformLocation' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"bool __cdecl ImGui_ImplOpenGL3_CreateDeviceObjects(void)" (?ImGui_ImplOpenGL3_CreateDeviceObjects@@YA_NXZ)'
+LINK : warning LNK4217: symbol '___glewLinkProgram' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"bool __cdecl ImGui_ImplOpenGL3_CreateDeviceObjects(void)" (?ImGui_ImplOpenGL3_CreateDeviceObjects@@YA_NXZ)'
+LINK : warning LNK4217: symbol '___glewShaderSource' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"bool __cdecl ImGui_ImplOpenGL3_CreateDeviceObjects(void)" (?ImGui_ImplOpenGL3_CreateDeviceObjects@@YA_NXZ)'
+LINK : warning LNK4217: symbol '___glewUniform1i' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"void __cdecl ImGui_ImplOpenGL3_SetupRenderState(struct ImDrawData *,int,int,unsigned int)" (?ImGui_ImplOpenGL3_SetupRenderState@@YAXPAUImDrawData@@HHI@Z)'
+LINK : warning LNK4217: symbol '___glewUniformMatrix4fv' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"void __cdecl ImGui_ImplOpenGL3_SetupRenderState(struct ImDrawData *,int,int,unsigned int)" (?ImGui_ImplOpenGL3_SetupRenderState@@YAXPAUImDrawData@@HHI@Z)'
+LINK : warning LNK4217: symbol '___glewUseProgram' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"void __cdecl ImGui_ImplOpenGL3_RenderDrawData(struct ImDrawData *)" (?ImGui_ImplOpenGL3_RenderDrawData@@YAXPAUImDrawData@@@Z)'
+LINK : warning LNK4217: symbol '___glewVertexAttribPointer' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"void __cdecl ImGui_ImplOpenGL3_SetupRenderState(struct ImDrawData *,int,int,unsigned int)" (?ImGui_ImplOpenGL3_SetupRenderState@@YAXPAUImDrawData@@HHI@Z)'
+LINK : warning LNK4217: symbol '___glewDrawElementsBaseVertex' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"void __cdecl ImGui_ImplOpenGL3_RenderDrawData(struct ImDrawData *)" (?ImGui_ImplOpenGL3_RenderDrawData@@YAXPAUImDrawData@@@Z)'
+LINK : warning LNK4217: symbol '___glewBindSampler' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"void __cdecl ImGui_ImplOpenGL3_RenderDrawData(struct ImDrawData *)" (?ImGui_ImplOpenGL3_RenderDrawData@@YAXPAUImDrawData@@@Z)'
+LINK : warning LNK4217: symbol '___glewBindVertexArray' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"bool __cdecl ImGui_ImplOpenGL3_CreateDeviceObjects(void)" (?ImGui_ImplOpenGL3_CreateDeviceObjects@@YA_NXZ)'
+LINK : warning LNK4217: symbol '___glewDeleteVertexArrays' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"void __cdecl ImGui_ImplOpenGL3_RenderDrawData(struct ImDrawData *)" (?ImGui_ImplOpenGL3_RenderDrawData@@YAXPAUImDrawData@@@Z)'
+LINK : warning LNK4217: symbol '___glewGenVertexArrays' defined in 'glew32s.lib(glew.obj)' is imported by 'imgui_impl_opengl3.obj' in function '"void __cdecl ImGui_ImplOpenGL3_RenderDrawData(struct ImDrawData *)" (?ImGui_ImplOpenGL3_RenderDrawData@@YAXPAUImDrawData@@@Z)'
+glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'glew32s.lib(glew.obj)' or at 'C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\vc120.pdb'; linking object as if no debug info
+  visualstudio.vcxproj -> C:\Users\aleix\Documents\GitHub\advanced-volume-graphics\framework_debug.exe

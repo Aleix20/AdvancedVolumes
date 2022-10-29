@@ -64,3 +64,19 @@ void SceneNode::renderInMenu()
 		ImGui::TreePop();
 	}
 }
+
+VolumeNode::VolumeNode()
+{
+	this->material = new VolumeMaterial();
+	this->mesh = new Mesh();
+	this->mesh->createCube();
+}
+
+VolumeNode::VolumeNode(const char* name)
+{
+	this->name = name;
+}
+
+VolumeNode::~VolumeNode()
+{
+}

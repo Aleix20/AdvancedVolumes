@@ -50,10 +50,19 @@ Application::Application(int window_width, int window_height, SDL_Window* window
 		StandardMaterial* mat = new StandardMaterial();
 		node->material = mat;
 		mat->shader = Shader::Get("data/shaders/basic.vs", "data/shaders/normal.fs");
-		node_list.push_back(node);
 
 		// TODO: create all the volumes to use in the app
-		// ...
+		VolumeNode* node1 = new VolumeNode("Orange");
+		node1->model.scale(1, 1, 1);
+		Volume* volume = new Volume();
+		volume->loadPVM("data/volumes/Orange.pvm");
+		Texture* texture = new Texture();
+		texture->create3DFromVolume(volume);
+		VolumeMaterial* material = new VolumeMaterial();
+		material->texture = texture;
+		node1->material = material;
+		node_list.push_back(node1);
+
 	}
 	
 	//hide the cursor

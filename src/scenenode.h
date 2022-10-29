@@ -31,5 +31,11 @@ public:
 };
 
 // TODO: Derived class VolumeNode
+class VolumeNode : public SceneNode {
+public:
+	VolumeNode();
+	VolumeNode(const char* name);
+	~VolumeNode();
+};
 
 #endif

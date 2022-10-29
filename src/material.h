@@ -40,5 +40,15 @@ public:
 };
 
 // TODO: Derived class VolumeMaterial
+class VolumeMaterial : public Material {
+public:
+		VolumeMaterial();
+		~VolumeMaterial();
+
+		void render(Mesh* mesh, Matrix44 model, Camera* camera);
+		void setUniforms(Camera* camera, Matrix44 model);
+		void renderInMenu();
+
+};
 
 #endif

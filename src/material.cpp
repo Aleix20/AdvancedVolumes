@@ -83,7 +83,7 @@ void WireframeMaterial::render(Mesh* mesh, Matrix44 model, Camera* camera)
 VolumeMaterial::VolumeMaterial()
 {
 	color = vec4(1.f, 1.f, 1.f, 1.f);
-	shader = Shader::Get("data/shaders/basic.vs", "data/shaders/flat.fs");
+	shader = Shader::Get("data/shaders/basic.vs", "data/shaders/volume.fs");
 	
 }
 
@@ -95,6 +95,7 @@ void VolumeMaterial::render(Mesh* mesh, Matrix44 model, Camera* camera)
 {
 	if (shader && mesh)
 	{
+
 		//enable shader
 		shader->enable();
 
@@ -115,6 +116,14 @@ void VolumeMaterial::setUniforms(Camera* camera, Matrix44 model)
 	shader->setUniform("u_model", model);
 	shader->setUniform("u_time", Application::instance->time);
 	shader->setUniform("u_color", color);
+	// Compute local camera position
+	Matrix44 model_local = model;
+	Vector3 u_local_camera_position = Vector3(0, 0, 0);
+
+	if (model_local.inverse())
+		u_local_camera_position = model_local * camera->eye;
+
+	shader->setUniform("u_local_camera_position", u_local_camera_position);
 
 	if (texture)
 		shader->setUniform("u_texture", texture);

@@ -68,13 +68,18 @@ void SceneNode::renderInMenu()
 VolumeNode::VolumeNode()
 {
 	this->material = new VolumeMaterial();
-	this->mesh = new Mesh();
-	this->mesh->createCube();
+	Mesh* newMesh = new Mesh();
+	newMesh->createCube();
+	this->mesh = newMesh;
 }
 
 VolumeNode::VolumeNode(const char* name)
 {
 	this->name = name;
+	this->material = new VolumeMaterial();
+	Mesh* newMesh = new Mesh();
+	newMesh->createCube();
+	this->mesh = newMesh;
 }
 
 VolumeNode::~VolumeNode()

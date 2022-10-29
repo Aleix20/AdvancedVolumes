@@ -53,11 +53,11 @@ Application::Application(int window_width, int window_height, SDL_Window* window
 
 		// TODO: create all the volumes to use in the app
 		VolumeNode* node1 = new VolumeNode("Orange");
-		node1->model.scale(1, 1, 1);
+		node1->model.setScale(2, 2, 2);
 		Volume* volume = new Volume();
 		volume->loadPVM("data/volumes/Orange.pvm");
 		Texture* texture = new Texture();
-		texture->create3DFromVolume(volume);
+		texture->create3D(volume->width, volume->height, volume->depth, GL_RED, GL_UNSIGNED_BYTE, false, volume->data, GL_RED);
 		VolumeMaterial* material = new VolumeMaterial();
 		material->texture = texture;
 		node1->material = material;

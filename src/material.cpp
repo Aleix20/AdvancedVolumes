@@ -83,7 +83,7 @@ void WireframeMaterial::render(Mesh* mesh, Matrix44 model, Camera* camera)
 VolumeMaterial::VolumeMaterial()
 {
 	color = vec4(1.f, 1.f, 1.f, 1.f);
-	shader = Shader::Get("data/shaders/basic.vs", "data/shaders/volume.fs");
+	shader = Shader::Get("data/shaders/basic.vs", "data/shaders/flat.fs");
 	
 }
 
@@ -95,8 +95,6 @@ void VolumeMaterial::render(Mesh* mesh, Matrix44 model, Camera* camera)
 {
 	if (shader && mesh)
 	{
-		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-
 		//enable shader
 		shader->enable();
 
@@ -106,15 +104,25 @@ void VolumeMaterial::render(Mesh* mesh, Matrix44 model, Camera* camera)
 		//do the draw call
 		mesh->render(GL_TRIANGLES);
 
-		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 	}
 }
 
 void VolumeMaterial::setUniforms(Camera* camera, Matrix44 model)
 {
+	//upload node uniforms
+	shader->setUniform("u_viewprojection", camera->viewprojection_matrix);
+	shader->setUniform("u_camera_position", camera->eye);
+	shader->setUniform("u_model", model);
+	shader->setUniform("u_time", Application::instance->time);
+	shader->setUniform("u_color", color);
+
+	if (texture)
+		shader->setUniform("u_texture", texture);
 }
 
 void VolumeMaterial::renderInMenu()
 {
+	ImGui::ColorEdit3("Color", (float*)&color); // Edit 3 floats representing a color
+
 }
 

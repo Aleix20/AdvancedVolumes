@@ -84,7 +84,8 @@ VolumeMaterial::VolumeMaterial()
 {
 	color = vec4(1.f, 1.f, 1.f, 1.f);
 	shader = Shader::Get("data/shaders/basic.vs", "data/shaders/volume.fs");
-	
+	quality = 50;
+	brightness = 20;
 }
 
 VolumeMaterial::~VolumeMaterial()
@@ -116,6 +117,8 @@ void VolumeMaterial::setUniforms(Camera* camera, Matrix44 model)
 	shader->setUniform("u_model", model);
 	shader->setUniform("u_time", Application::instance->time);
 	shader->setUniform("u_color", color);
+	shader->setUniform("u_quality", quality);
+	shader->setUniform("u_brightness", brightness);
 	// Compute local camera position
 	Matrix44 model_local = model;
 	Vector3 u_local_camera_position = Vector3(0, 0, 0);

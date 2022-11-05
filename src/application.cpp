@@ -33,6 +33,10 @@ Application::Application(int window_width, int window_height, SDL_Window* window
 	elapsed_time = 0.0f;
 	mouse_locked = false;
 
+	// Set the quality and brightness initial values
+	brightness = 7.0;
+	quality = 200;
+
 	// OpenGL flags
 	glEnable( GL_CULL_FACE ); //render both sides of every triangle
 	glEnable( GL_DEPTH_TEST ); //check the occlusions using the Z buffer
@@ -52,15 +56,28 @@ Application::Application(int window_width, int window_height, SDL_Window* window
 		mat->shader = Shader::Get("data/shaders/basic.vs", "data/shaders/normal.fs");
 
 		// TODO: create all the volumes to use in the app
-		VolumeNode* node1 = new VolumeNode("Orange");
-		node1->model.setScale(2, 2, 2);
-		Volume* volume = new Volume();
+		
+		// Create a SceneNode using VolumeNode class
+		VolumeNode* node1 = new VolumeNode("Abdomen");
+		
+		// Load a Volume
+		Volume *volume = new Volume();
 		volume->loadPVM("data/volumes/CT-Abdomen.pvm");
+
+		// Create a texture from the volume
 		Texture* texture = new Texture();
-		texture->create3D(volume->width, volume->height, volume->depth, GL_RED, GL_UNSIGNED_BYTE, false, volume->data, GL_RED);
-		VolumeMaterial* material = new VolumeMaterial();
-		material->texture = texture;
-		node1->material = material;
+		texture->create3DFromVolume(volume, GL_CLAMP_TO_EDGE);
+		
+		//Assign the texture to the node material
+		node1->material->texture = texture;
+		
+		// Set the material and model to the SceneNode
+		// Take into account the maximum size one of the dimensions and adpat all the others to it
+		//node1->model.setScale(volume.width*volume->widthSpacing);
+		float norm = volume->width * volume->widthSpacing;
+		node1->model.setScale(1, (volume->height*volume->heightSpacing)/norm, (volume->depth*volume->depthSpacing)/norm);
+
+		// Set the node to the list of nodes
 		node_list.push_back(node1);
 
 	}
@@ -233,4 +250,6 @@ void Application::renderInMenu() {
 
 	ImGui::Checkbox("Render debug", &render_debug);
 	ImGui::Checkbox("Wireframe", &render_wireframe);
+	ImGui::SliderFloat("Brightness",&brightness,0,10);
+	ImGui::SliderFloat("Quality", &quality, 0, 500);
 }

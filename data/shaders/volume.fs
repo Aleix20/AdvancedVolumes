@@ -11,28 +11,43 @@ uniform float u_brightness;
 
 void main()
 {
+
+	//Direction of the vector to do the approximation
 	vec3 dir = normalize(v_position - u_local_camera_position);
+	//Steps to advance through the volume
 	vec3 step = dir/u_quality;
-	float step_len = length(step);
-	vec3 position = v_position + step;
+	
+	vec3 sample_position = v_position;
 	vec4 color_i = vec4(0,0,0,0);
 	vec4 finalColor = vec4(0,0,0,0);
-	for (int i=0; i<200; i++)
+	
+	for (int i=0; i<1000; i++)
 	{
-		vec3 position_text = (position + 1)/2.0;
-		color_i = texture3D(u_texture, position_text);
-		float d = color_i.x;
-		vec4 sample_color = vec4(d,1-d,0,d*d);
-		finalColor += length(step) * color_i * (1.0 - finalColor.a+ u_brightness/15.0) * sample_color;
-
-		position += step;
+		//Color from the texture	
+		color_i = texture3D(u_texture, ((sample_position+1.0)/2.0)); // The +1 and /2 is to change the sample_position to texture coords
 		
-		if ((position.x > 1) || (position.y > 1) || (position.z > 1) || (position.x < -1) || (position.y < -1) || (position.z < -1))
-			break;
-		if (finalColor.a > 0.98)
+		float d = color_i.x; 
+		//Sample color that comes from the texture
+		vec4 sample_color = vec4(d,d,d,d);
+		
+		//Apply the alpha to the rgb components
+		sample_color.rgb *= sample_color.a;
+		if (finalColor.a >=1.00)
+			discard;
+		
+		//Compute the final color
+		finalColor += length(step)* (1.0 - finalColor.a) * sample_color;
+		//Next position
+		sample_position += step;
+		
+
+		//boundaries conditions
+		if ((sample_position.x > 1) || (sample_position.y > 1) || (sample_position.z > 1) || (sample_position.x < -1) || (sample_position.y < -1) || (sample_position.z < -1))
 			break;
 		
 		
 	}
-	gl_FragColor = finalColor;
+	
+	//Apply brightness to the final color
+	gl_FragColor = finalColor*u_brightness;
 }

@@ -84,8 +84,6 @@ VolumeMaterial::VolumeMaterial()
 {
 	color = vec4(1.f, 1.f, 1.f, 1.f);
 	shader = Shader::Get("data/shaders/basic.vs", "data/shaders/volume.fs");
-	quality = 50;
-	brightness = 20;
 }
 
 VolumeMaterial::~VolumeMaterial()
@@ -96,6 +94,10 @@ void VolumeMaterial::render(Mesh* mesh, Matrix44 model, Camera* camera)
 {
 	if (shader && mesh)
 	{
+		glEnable(GL_CULL_FACE);
+		glCullFace(GL_BACK);
+		glEnable(GL_BLEND);
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 		//enable shader
 		shader->enable();
@@ -117,14 +119,14 @@ void VolumeMaterial::setUniforms(Camera* camera, Matrix44 model)
 	shader->setUniform("u_model", model);
 	shader->setUniform("u_time", Application::instance->time);
 	shader->setUniform("u_color", color);
-	shader->setUniform("u_quality", quality);
-	shader->setUniform("u_brightness", brightness);
+	shader->setUniform("u_quality", Application::instance->quality);
+	shader->setUniform("u_brightness", Application::instance->brightness);
+	
 	// Compute local camera position
-	Matrix44 model_local = model;
 	Vector3 u_local_camera_position = Vector3(0, 0, 0);
 
-	if (model_local.inverse())
-		u_local_camera_position = model_local * camera->eye;
+	if (model.inverse())
+		u_local_camera_position = model * camera->eye;
 
 	shader->setUniform("u_local_camera_position", u_local_camera_position);
 

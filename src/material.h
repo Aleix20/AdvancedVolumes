@@ -48,6 +48,14 @@ public:
 		void render(Mesh* mesh, Matrix44 model, Camera* camera);
 		void setUniforms(Camera* camera, Matrix44 model);
 		void renderInMenu();
+private:
+	// Set the quality and brightness initial values
+	float quality = 200;
+	float brightness = 7.0;
+
+	bool jittering = false;
+	bool tf = false;
+
 };
 
 #endif

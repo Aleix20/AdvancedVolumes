@@ -119,8 +119,8 @@ void VolumeMaterial::setUniforms(Camera* camera, Matrix44 model)
 	shader->setUniform("u_model", model);
 	shader->setUniform("u_time", Application::instance->time);
 	shader->setUniform("u_color", color);
-	shader->setUniform("u_quality", Application::instance->quality);
-	shader->setUniform("u_brightness", Application::instance->brightness);
+	shader->setUniform("u_quality", quality);
+	shader->setUniform("u_brightness", brightness);
 	
 	// Compute local camera position
 	Vector3 u_local_camera_position = Vector3(0, 0, 0);
@@ -132,11 +132,24 @@ void VolumeMaterial::setUniforms(Camera* camera, Matrix44 model)
 
 	if (texture)
 		shader->setUniform("u_texture", texture);
+
+	shader->setUniform("u_jittering", jittering);
+	shader->setUniform("u_blueNoise", Application::instance->blueNoise);
+	shader->setUniform("u_blueNoise_width", Application::instance->blueNoise->width);
+
+	//TF
+	shader->setUniform("u_tf", tf);
+	shader->setUniform("u_texture_tf", Application::instance->texture_tf);
+
 }
 
 void VolumeMaterial::renderInMenu()
 {
 	ImGui::ColorEdit3("Color", (float*)&color); // Edit 3 floats representing a color
+	ImGui::SliderFloat("Brightness", &brightness, 0, 10);
+	ImGui::SliderFloat("Quality", &quality, 0, 500);
+	ImGui::Checkbox("Jittering", &jittering);
+	ImGui::Checkbox("TF", &tf);
 
 }
 

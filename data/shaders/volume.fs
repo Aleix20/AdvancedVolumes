@@ -12,6 +12,22 @@ uniform vec3 u_local_camera_position;
 uniform float u_quality;
 uniform float u_brightness;
 
+//Jittering boolean
+uniform bool u_jittering;
+
+//blueNoise texture and width to calculate the offset value
+uniform sampler2D u_blueNoise;
+uniform float u_blueNoise_width;
+
+//Transfer function
+uniform bool u_tf;
+uniform sampler2D u_texture_tf;
+
+
+float rand(vec2 co){
+	return fract(sin(dot(co, vec2(12.9898, 78.233)))*43758.5453);
+}
+
 void main()
 {
 	//1. SETUP RAY (init variables to use in the algorithm)
@@ -22,8 +38,17 @@ void main()
 	//Steps to advance through the volume
 	vec3 step = dir/u_quality;
 	
-	//Init first position
-	vec3 sample_position = v_position;
+	//Init first position taking into account if jittering activated
+	float random = 0.0;	
+	vec4 random2 = vec4(0);	
+
+	if(u_jittering){
+		//random = rand(gl_FragCoord.xy); Function case (Already approved)
+		random2 = texture2D(u_blueNoise, gl_FragCoord.xy/u_blueNoise_width);
+		random = random2.x;
+	}
+	
+	vec3 sample_position = v_position + random*step;
 
 	//Init color vectors
 	vec4 color_i = vec4(0,0,0,0);
@@ -40,8 +65,16 @@ void main()
 		
 
 		//3. OBTAIN COLOR FROM DENSITY OBTAINED
-		float d = color_i.x; 
-		vec4 sample_color = vec4(d,d,d,d);
+		float d = color_i.x;
+
+
+		if(u_tf){
+			vec4 color_tf = texture2D(u_texture_tf, ((sample_position.xy+1.0)/2.0));
+			d = color_tf.x;	
+		}
+
+		color_i = vec4(u_color.x, u_color.y, u_color.z, pow(d,2));
+		vec4 sample_color = color_i;
 		
 		//Apply the alpha to the rgb components
 		sample_color.rgb *= sample_color.a;

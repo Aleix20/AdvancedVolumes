@@ -33,9 +33,13 @@ Application::Application(int window_width, int window_height, SDL_Window* window
 	elapsed_time = 0.0f;
 	mouse_locked = false;
 
-	// Set the quality and brightness initial values
-	brightness = 7.0;
-	quality = 200;
+	//Load the blueNoise texture
+	blueNoise = new Texture();
+	blueNoise->load("data/images/blueNoise.png");
+	
+	//Load the transfer function image
+	texture_tf = new Texture();
+	texture_tf->load("data/images/TF.png");
 
 	// OpenGL flags
 	glEnable( GL_CULL_FACE ); //render both sides of every triangle
@@ -250,6 +254,4 @@ void Application::renderInMenu() {
 
 	ImGui::Checkbox("Render debug", &render_debug);
 	ImGui::Checkbox("Wireframe", &render_wireframe);
-	ImGui::SliderFloat("Brightness",&brightness,0,10);
-	ImGui::SliderFloat("Quality", &quality, 0, 500);
 }

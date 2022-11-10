@@ -59,7 +59,7 @@ void SceneNode::renderInMenu()
 	if (mesh && ImGui::TreeNode("Geometry"))
 	{
 		bool changed = false;
-		changed |= ImGui::Combo("Mesh", (int*)&mesh_selected, "SPHERE\0");
+		changed |= ImGui::Combo("Mesh", (int*)&mesh_selected, "SPHERE\0gdf\0");
 
 		ImGui::TreePop();
 	}

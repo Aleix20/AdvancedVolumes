@@ -11,6 +11,10 @@ uniform vec3 u_local_camera_position;
 //Visualization variables
 uniform float u_quality;
 uniform float u_brightness;
+uniform float u_a;
+uniform float u_b;
+uniform float u_c;
+uniform float u_d;
 
 //Jittering boolean
 uniform bool u_jittering;
@@ -66,14 +70,24 @@ void main()
 
 		//3. OBTAIN COLOR FROM DENSITY OBTAINED
 		float d = color_i.x;
-
-
+		float result = u_a*sample_position.x+u_b*sample_position.y+u_c*sample_position.z+u_d;
+		if(result>0){
+			sample_position += step;
+		
+			if ((sample_position.x > 1) || (sample_position.y > 1) || (sample_position.z > 1) || (sample_position.x < -1) || (sample_position.y < -1) || (sample_position.z < -1))
+				break;
+			if (finalColor.a >=0.98)
+				break;
+			continue;
+		}
+		color_i = vec4(u_color.x, u_color.y, u_color.z, pow(d,2));
+		
 		if(u_tf){
-			vec4 color_tf = texture2D(u_texture_tf, ((sample_position.xy+1.0)/2.0));
-			d = color_tf.x;	
+			vec2 tf_coords = vec2(d,1);
+			vec4 color_tf = texture2D(u_texture_tf, tf_coords);
+			color_i = vec4(color_tf.x, color_tf.y, color_tf.z, pow(d,2));
 		}
 
-		color_i = vec4(u_color.x, u_color.y, u_color.z, pow(d,2));
 		vec4 sample_color = color_i;
 		
 		//Apply the alpha to the rgb components

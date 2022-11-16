@@ -52,7 +52,13 @@ private:
 	// Set the quality and brightness initial values
 	float quality = 200;
 	float brightness = 7.0;
+	// Plane coefficients for volume clipping
+	float a = 0.0;
+	float b = 0.0;
+	float c = 0.0;
+	float d = 0.0;
 
+	//Booleans for the jittering and transfer function
 	bool jittering = false;
 	bool tf = false;
 

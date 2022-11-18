@@ -44,12 +44,17 @@ Application::Application(int window_width, int window_height, SDL_Window* window
 	// OpenGL flags
 	glEnable( GL_CULL_FACE ); //render both sides of every triangle
 	glEnable( GL_DEPTH_TEST ); //check the occlusions using the Z buffer
-
+	
+	
+	light = new Light();
+	light->position = vec3(5, 10, 5);
+	
+	
 	// Create camera
 	camera = new Camera();
 	camera->lookAt(Vector3(5.f, 5.f, 5.f), Vector3(0.f, 0.0f, 0.f), Vector3(0.f, 1.f, 0.f));
 	camera->setPerspective(45.f, window_width/(float)window_height, 0.1f, 10000.f); //set the projection, we want to be perspective
-
+	
 	{
 		// EXAMPLE OF HOW TO CREATE A SCENE NODE
 		SceneNode* node = new SceneNode("Visible node");
@@ -66,7 +71,7 @@ Application::Application(int window_width, int window_height, SDL_Window* window
 		
 		// Load a Volume
 		Volume *volume = new Volume();
-		volume->loadPVM("data/volumes/CT-Abdomen.pvm");
+		volume->loadPNG("data/volumes/teapot_16_16.png");
 
 		// Create a texture from the volume
 		Texture* texture = new Texture();
@@ -74,6 +79,7 @@ Application::Application(int window_width, int window_height, SDL_Window* window
 		
 		//Assign the texture to the node material
 		node1->material->texture = texture;
+		
 		
 		// Set the material and model to the SceneNode
 		// Take into account the maximum size one of the dimensions and adpat all the others to it
@@ -105,7 +111,7 @@ void Application::render(void)
 	// set flags
 	glEnable(GL_DEPTH_TEST);
 	glDisable(GL_CULL_FACE);
-
+	
 	for (size_t i = 0; i < node_list.size(); i++) {
 		node_list[i]->render(camera);
 
@@ -232,7 +238,10 @@ void Application::renderInMenu() {
 		camera->renderInMenu();
 		ImGui::TreePop();
 	}
-
+	if (ImGui::TreeNode("Light")) {
+		light->renderInMenu();
+		ImGui::TreePop();
+	}
 	//Scene graph
 	if (ImGui::TreeNode("Entities"))
 	{
@@ -254,4 +263,15 @@ void Application::renderInMenu() {
 
 	ImGui::Checkbox("Render debug", &render_debug);
 	ImGui::Checkbox("Wireframe", &render_wireframe);
+	bool changed = false;
+	changed |= ImGui::Combo("Shader", (int*)&shader, "Volume\0isosurface\0");
+	if (changed) {
+		if (shader == 1) {
+			node_list[0]->material->shader = Shader::Get("data/shaders/basic.vs", "data/shaders/isosurfaces.fs");
+		}
+		else {
+			node_list[0]->material->shader = Shader::Get("data/shaders/basic.vs", "data/shaders/volume.fs");
+		}
+	}
+
 }

@@ -22,6 +22,7 @@ public:
 	SDL_Window* window;
 	int window_width;
 	int window_height;
+	unsigned int shader = 0;
 
 	// some globals
 	long frame;
@@ -40,6 +41,9 @@ public:
 
 	// Declare the transfer function texture
 	Texture* texture_tf;
+
+	//Declare the light
+	Light* light;
 
 	// constructor
 	Application(int window_width, int window_height, SDL_Window* window);

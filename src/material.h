@@ -62,6 +62,11 @@ private:
 	bool jittering = false;
 	bool tf = false;
 
+	//Threshold of density for the isosurfaces
+	float threshold = 0.4;
+
+	float h = 0.0;
+
 };
 
 #endif

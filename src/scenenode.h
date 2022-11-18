@@ -38,4 +38,17 @@ public:
 	~VolumeNode();
 };
 
+class Light : public SceneNode {
+public:
+
+	Light();
+	~Light();
+
+	vec3 position;
+	vec3 color;
+	float intensity;
+
+	void renderInMenu();
+};
+
 #endif

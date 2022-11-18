@@ -125,14 +125,21 @@ void VolumeMaterial::setUniforms(Camera* camera, Matrix44 model)
 	shader->setUniform("u_b", b);
 	shader->setUniform("u_c", c);
 	shader->setUniform("u_d", d);
+	shader->setUniform("u_threshold", threshold);
+	shader->setUniform("u_h", h);
+
 
 	
 	// Compute local camera position
 	Vector3 u_local_camera_position = Vector3(0, 0, 0);
+	Vector3 u_local_light_position = Vector3(0, 0, 0);
 
-	if (model.inverse())
+	if (model.inverse()) {
 		u_local_camera_position = model * camera->eye;
-
+		u_local_light_position = model * Application::instance->light->position;
+	}
+		
+	shader->setUniform("u_local_light_position", u_local_light_position);
 	shader->setUniform("u_local_camera_position", u_local_camera_position);
 
 	if (texture)
@@ -161,6 +168,8 @@ void VolumeMaterial::renderInMenu()
 	ImGui::SliderFloat("d", &d, -2, 2);
 	ImGui::Checkbox("Jittering", &jittering);
 	ImGui::Checkbox("TF", &tf);
+	ImGui::SliderFloat("TH", &threshold, 0, 1);
+	ImGui::SliderFloat("H", &h,0, 0.010,"%.3f", 2);
 
 }
 

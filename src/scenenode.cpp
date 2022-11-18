@@ -85,3 +85,20 @@ VolumeNode::VolumeNode(const char* name)
 VolumeNode::~VolumeNode()
 {
 }
+
+Light::Light()
+{
+	this->name = "Light";
+	position = vec3(10, 10, 10);
+	color = vec3(1.f, 1.f, 1.f);
+	intensity = 1.f;
+}
+
+void Light::renderInMenu()
+{
+	{
+		ImGui::DragFloat3("Position", (float*)&position, 0.1f);
+		ImGui::ColorEdit3("Color", (float*)&color, 0.1f);
+		ImGui::DragFloat("Scale", &intensity, 0.1f, 0, 10);
+	}
+}

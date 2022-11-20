@@ -18,6 +18,7 @@ uniform float u_d;
 
 //Jittering boolean
 uniform bool u_jittering;
+uniform float u_jittering_sol;
 
 //blueNoise texture and width to calculate the offset value
 uniform sampler2D u_blueNoise;
@@ -47,9 +48,14 @@ void main()
 	vec4 random2 = vec4(0);	
 
 	if(u_jittering){
-		//random = rand(gl_FragCoord.xy); Function case (Already approved)
-		random2 = texture2D(u_blueNoise, gl_FragCoord.xy/u_blueNoise_width);
-		random = random2.x;
+		if(u_jittering_sol==0.0){
+			random = rand(gl_FragCoord.xy); //Function case (Already approved)
+		}else{
+			random2 = texture2D(u_blueNoise, gl_FragCoord.xy/u_blueNoise_width);
+			random = random2.x;
+
+		}
+		
 	}
 	
 	vec3 sample_position = v_position + random*step;

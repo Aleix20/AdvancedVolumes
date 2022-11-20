@@ -20,6 +20,7 @@ uniform float u_h;
 
 //Jittering boolean
 uniform bool u_jittering;
+uniform float u_jittering_sol;
 
 //blueNoise texture and width to calculate the offset value
 uniform sampler2D u_blueNoise;
@@ -31,6 +32,7 @@ uniform sampler2D u_texture_tf;
 
 //Light
 uniform vec3 u_local_light_position;
+uniform float u_light_intensity;
 
 
 float rand(vec2 co){
@@ -52,9 +54,13 @@ void main()
 	vec4 random2 = vec4(0);	
 
 	if(u_jittering){
-		//random = rand(gl_FragCoord.xy); Function case (Already approved)
-		random2 = texture2D(u_blueNoise, gl_FragCoord.xy/u_blueNoise_width);
-		random = random2.x;
+		if(u_jittering_sol==0.0){
+			random = rand(gl_FragCoord.xy); //Function case (Already approved)
+		}else{
+			random2 = texture2D(u_blueNoise, gl_FragCoord.xy/u_blueNoise_width);
+			random = random2.x;
+
+		}
 	}
 	
 	vec3 sample_position = v_position + random*step;
@@ -129,7 +135,7 @@ void main()
 		vec3 R = reflect(-L, N);
 
 
-		vec4 Ip = vec4(sample_color.rgb * (clamp(dot(N,L),0.0,1.0) + pow(clamp(dot(R,V),0.0,1.0), 10.0) ), 1.0);
+		vec4 Ip = vec4(sample_color.rgb * (clamp(dot(N,L),0.0,1.0) + pow(clamp(dot(R,V),0.0,1.0), u_light_intensity) ), 1.0);
 		
 		//4. COMPOSITION OF FINAL COLOR
 		finalColor = Ip;

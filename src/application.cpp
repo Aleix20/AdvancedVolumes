@@ -40,6 +40,11 @@ Application::Application(int window_width, int window_height, SDL_Window* window
 	//Load the transfer function image
 	texture_tf = new Texture();
 	texture_tf->load("data/images/TF.png");
+	Texture * texture_tf2 = new Texture();
+	texture_tf2->load("data/images/TF2.png");
+
+	textures_tf.push_back(texture_tf);
+	textures_tf.push_back(texture_tf2);
 
 	// OpenGL flags
 	glEnable( GL_CULL_FACE ); //render both sides of every triangle
@@ -66,29 +71,48 @@ Application::Application(int window_width, int window_height, SDL_Window* window
 
 		// TODO: create all the volumes to use in the app
 		
-		// Create a SceneNode using VolumeNode class
-		VolumeNode* node1 = new VolumeNode("Abdomen");
 		
-		// Load a Volume
-		Volume *volume = new Volume();
-		volume->loadPNG("data/volumes/teapot_16_16.png");
+		for (size_t i = 0; i < 3; i++)
+		{
 
-		// Create a texture from the volume
-		Texture* texture = new Texture();
-		texture->create3DFromVolume(volume, GL_CLAMP_TO_EDGE);
-		
-		//Assign the texture to the node material
-		node1->material->texture = texture;
-		
-		
-		// Set the material and model to the SceneNode
-		// Take into account the maximum size one of the dimensions and adpat all the others to it
-		//node1->model.setScale(volume.width*volume->widthSpacing);
-		float norm = volume->width * volume->widthSpacing;
-		node1->model.setScale(1, (volume->height*volume->heightSpacing)/norm, (volume->depth*volume->depthSpacing)/norm);
+			// Create a SceneNode using VolumeNode class
+			VolumeNode* node1 = new VolumeNode();
 
-		// Set the node to the list of nodes
-		node_list.push_back(node1);
+			// Load a Volume
+			Volume* volume = new Volume();
+			if (i==0) {
+				volume->loadPVM("data/volumes/CT-Abdomen.pvm");
+				node1->name = "Abdomen";
+
+			}
+			else if (i==1) {
+				volume->loadPNG("data/volumes/teapot_16_16.png");
+				node1->name = "Teapot";
+			}
+			else {
+				volume->loadPNG("data/volumes/foot_16_16.png");
+				node1->name = "Foot";
+			}
+
+
+			// Create a texture from the volume
+			Texture* texture = new Texture();
+			texture->create3DFromVolume(volume, GL_CLAMP_TO_EDGE);
+
+			//Assign the texture to the node material
+			node1->material->texture = texture;
+
+
+			// Set the material and model to the SceneNode
+			// Take into account the maximum size one of the dimensions and adpat all the others to it
+			float norm = volume->width * volume->widthSpacing;
+			node1->model.setScale(1, (volume->height * volume->heightSpacing) / norm, (volume->depth * volume->depthSpacing) / norm);
+
+			// Set the node to the list of nodes
+			node_list.push_back(node1);
+
+		}
+		
 
 	}
 	
@@ -112,12 +136,12 @@ void Application::render(void)
 	glEnable(GL_DEPTH_TEST);
 	glDisable(GL_CULL_FACE);
 	
-	for (size_t i = 0; i < node_list.size(); i++) {
-		node_list[i]->render(camera);
+	
+		node_list[volume]->render(camera);
 
 		if(render_wireframe)
-			node_list[i]->renderWireframe(camera);
-	}
+			node_list[volume]->renderWireframe(camera);
+	
 
 	//Draw the floor grid
 	if(render_debug)
@@ -247,24 +271,23 @@ void Application::renderInMenu() {
 	{
 		unsigned int count = 0;
 		std::stringstream ss;
-		for (auto& node : node_list)
-		{
+		
 			ss << count;
-			if (ImGui::TreeNode(node->name.c_str()))
+			if (ImGui::TreeNode(node_list[volume]->name.c_str()))
 			{
-				node->renderInMenu();
+				node_list[volume]->renderInMenu();
 				ImGui::TreePop();
 			}
 			++count;
 			ss.str("");
-		}
+		
 		ImGui::TreePop();
 	}
 
 	ImGui::Checkbox("Render debug", &render_debug);
 	ImGui::Checkbox("Wireframe", &render_wireframe);
 	bool changed = false;
-	changed |= ImGui::Combo("Shader", (int*)&shader, "Volume\0isosurface\0");
+	changed |= ImGui::Combo("Shader", (int*)&shader, "Volume\0Isosurface\0");
 	if (changed) {
 		if (shader == 1) {
 			node_list[0]->material->shader = Shader::Get("data/shaders/basic.vs", "data/shaders/isosurfaces.fs");
@@ -273,5 +296,9 @@ void Application::renderInMenu() {
 			node_list[0]->material->shader = Shader::Get("data/shaders/basic.vs", "data/shaders/volume.fs");
 		}
 	}
+
+	bool changed2 = false;
+	changed2 |= ImGui::Combo("Volume", (int*)&volume, "Abdomen\0Teapot\0Foot\0");
+	
 
 }

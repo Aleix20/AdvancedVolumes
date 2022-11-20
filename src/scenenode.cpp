@@ -98,7 +98,6 @@ void Light::renderInMenu()
 {
 	{
 		ImGui::DragFloat3("Position", (float*)&position, 0.1f);
-		ImGui::ColorEdit3("Color", (float*)&color, 0.1f);
-		ImGui::DragFloat("Scale", &intensity, 0.1f, 0, 10);
+		ImGui::DragFloat("Intensity", &intensity, 0.1f, 0, 10);
 	}
 }

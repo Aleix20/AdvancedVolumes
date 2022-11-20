@@ -142,16 +142,21 @@ void VolumeMaterial::setUniforms(Camera* camera, Matrix44 model)
 	shader->setUniform("u_local_light_position", u_local_light_position);
 	shader->setUniform("u_local_camera_position", u_local_camera_position);
 
+	shader->setUniform("u_light_intensity", Application::instance->light->intensity);
+
+
 	if (texture)
 		shader->setUniform("u_texture", texture);
 
 	shader->setUniform("u_jittering", jittering);
+	shader->setUniform("u_jittering_sol", jittering_sol);
+
 	shader->setUniform("u_blueNoise", Application::instance->blueNoise);
 	shader->setUniform("u_blueNoise_width", Application::instance->blueNoise->width);
 
 	//TF
 	shader->setUniform("u_tf", tf);
-	shader->setUniform("u_texture_tf", Application::instance->texture_tf);
+	shader->setUniform("u_texture_tf", Application::instance->textures_tf[tf_sol]);
 
 
 
@@ -167,9 +172,15 @@ void VolumeMaterial::renderInMenu()
 	ImGui::SliderFloat("c", &c, -2, 2);
 	ImGui::SliderFloat("d", &d, -2, 2);
 	ImGui::Checkbox("Jittering", &jittering);
+	bool changed2 = false;
+	changed2 |= ImGui::Combo("Jittering solution", (int*)&jittering_sol, "Random\0BlueNoise\0");
 	ImGui::Checkbox("TF", &tf);
+	
+	bool changed = false;
+	changed |= ImGui::Combo("Volume", (int*)&tf_sol, "TF_red_blue\0TF_Yellow_green\0");
 	ImGui::SliderFloat("TH", &threshold, 0, 1);
 	ImGui::SliderFloat("H", &h,0, 0.010,"%.3f", 2);
+	
 
 }
 

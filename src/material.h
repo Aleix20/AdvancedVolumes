@@ -61,6 +61,8 @@ private:
 	//Booleans for the jittering and transfer function
 	bool jittering = false;
 	bool tf = false;
+	unsigned int jittering_sol = 0;
+	unsigned int tf_sol = 0;
 
 	//Threshold of density for the isosurfaces
 	float threshold = 0.4;

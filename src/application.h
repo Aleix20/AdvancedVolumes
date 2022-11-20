@@ -18,11 +18,15 @@ public:
 
 	std::vector <SceneNode*> node_list;
 
+	std::vector <Texture*> textures_tf;
+
 	// window
 	SDL_Window* window;
 	int window_width;
 	int window_height;
 	unsigned int shader = 0;
+
+	unsigned int volume = 0;
 
 	// some globals
 	long frame;

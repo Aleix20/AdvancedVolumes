@@ -48,9 +48,12 @@ void main()
 	vec4 random2 = vec4(0);	
 
 	if(u_jittering){
+		//Take the value from the random jittering function
 		if(u_jittering_sol==0.0){
 			random = rand(gl_FragCoord.xy); //Function case (Already approved)
-		}else{
+		}
+		//Take the value from the texture blue noise for jittering 
+		else{
 			random2 = texture2D(u_blueNoise, gl_FragCoord.xy/u_blueNoise_width);
 			random = random2.x;
 
@@ -58,6 +61,7 @@ void main()
 		
 	}
 	
+	//Apply jittering if needed
 	vec3 sample_position = v_position + random*step;
 
 	//Init color vectors
@@ -76,6 +80,7 @@ void main()
 
 		//3. OBTAIN COLOR FROM DENSITY OBTAINED
 		float d = color_i.x;
+		//Plane equation to decide which parts we want to show
 		float result = u_a*sample_position.x+u_b*sample_position.y+u_c*sample_position.z+u_d;
 		if(result>0){
 			sample_position += step;
@@ -89,7 +94,9 @@ void main()
 		color_i = vec4(u_color.x, u_color.y, u_color.z, pow(d,2));
 		
 		if(u_tf){
+			//Coordinates of the tf texture based on density
 			vec2 tf_coords = vec2(d,1);
+			//Extract the color from the TF texture
 			vec4 color_tf = texture2D(u_texture_tf, tf_coords);
 			color_i = vec4(color_tf.x, color_tf.y, color_tf.z, pow(d,2));
 		}

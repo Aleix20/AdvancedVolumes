@@ -290,10 +290,10 @@ void Application::renderInMenu() {
 	changed |= ImGui::Combo("Shader", (int*)&shader, "Volume\0Isosurface\0");
 	if (changed) {
 		if (shader == 1) {
-			node_list[0]->material->shader = Shader::Get("data/shaders/basic.vs", "data/shaders/isosurfaces.fs");
+			node_list[volume]->material->shader = Shader::Get("data/shaders/basic.vs", "data/shaders/isosurfaces.fs");
 		}
 		else {
-			node_list[0]->material->shader = Shader::Get("data/shaders/basic.vs", "data/shaders/volume.fs");
+			node_list[volume]->material->shader = Shader::Get("data/shaders/basic.vs", "data/shaders/volume.fs");
 		}
 	}
 

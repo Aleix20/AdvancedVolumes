@@ -148,6 +148,8 @@ void VolumeMaterial::setUniforms(Camera* camera, Matrix44 model)
 	if (texture)
 		shader->setUniform("u_texture", texture);
 
+
+	//Jittering
 	shader->setUniform("u_jittering", jittering);
 	shader->setUniform("u_jittering_sol", jittering_sol);
 

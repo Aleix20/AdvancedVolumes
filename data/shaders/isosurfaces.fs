@@ -54,15 +54,18 @@ void main()
 	vec4 random2 = vec4(0);	
 
 	if(u_jittering){
+		//Take the value from the random jittering function
 		if(u_jittering_sol==0.0){
 			random = rand(gl_FragCoord.xy); //Function case (Already approved)
-		}else{
+		}
+		//Take the value from the texture blue noise for jittering 
+		else{
 			random2 = texture2D(u_blueNoise, gl_FragCoord.xy/u_blueNoise_width);
 			random = random2.x;
 
 		}
 	}
-	
+	//Apply jittering if needed
 	vec3 sample_position = v_position + random*step;
 
 	//Init color vectors
@@ -81,6 +84,7 @@ void main()
 
 		//3. OBTAIN COLOR FROM DENSITY OBTAINED
 		float d = color_i.x;
+		//Plane equation to decide which parts we want to show
 		float result = u_a*sample_position.x+u_b*sample_position.y+u_c*sample_position.z+u_d;
 		if(result>0){
 			sample_position += step;
@@ -91,6 +95,7 @@ void main()
 				break;
 			continue;
 		}
+		//Threshold to decide which densities we want to show
 		if(d<u_threshold){
 			sample_position += step;
 		
@@ -104,7 +109,9 @@ void main()
 		color_i = vec4(u_color.x, u_color.y, u_color.z, pow(d,2));
 		
 		if(u_tf){
+			//Coordinates of the tf texture based on density
 			vec2 tf_coords = vec2(d,1);
+			//Extract the color from the TF texture
 			vec4 color_tf = texture2D(u_texture_tf, tf_coords);
 			color_i = vec4(color_tf.x, color_tf.y, color_tf.z, pow(d,2));
 		}
@@ -116,7 +123,7 @@ void main()
 		
 		
 		
-		//Calculem els vectors L, V, N per realitzar els càlculs de la llum
+		
 		vec3 L = u_local_light_position - sample_position;
 		vec3 V = u_local_camera_position - sample_position;
 
@@ -126,15 +133,15 @@ void main()
 		float pos_text_dz = texture3D(u_texture, ((sample_position+1.0)/2.0)+ vec3(0,0,u_h)).x - texture3D(u_texture, ((sample_position+1.0)/2.0)- vec3(0,0,u_h)).x;
 		vec3 N = -1*vec3(pos_text_dx, pos_text_dy, pos_text_dz) / (2*u_h);
 	
-		//Normalitzem els vectors
+		//Normalize vectors
 		N = normalize(N);
 		L = normalize(L);
 		V = normalize(V);
 
-		//Calculem el vector R que serà la reflexió de L respecte a la Normal
+		//Compute vector R reflection of L with respect to the Normal
 		vec3 R = reflect(-L, N);
 
-
+		//Phong equation
 		vec4 Ip = vec4(sample_color.rgb * (clamp(dot(N,L),0.0,1.0) + pow(clamp(dot(R,V),0.0,1.0), u_light_intensity) ), 1.0);
 		
 		//4. COMPOSITION OF FINAL COLOR

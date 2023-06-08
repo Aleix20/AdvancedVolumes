@@ -114,9 +114,9 @@ In pseudocode terms, what we do is (d is density):
 
 
 
-`	`**color\_tf = get the texture value of blueNoise texture at point (d,1)**
+**color\_tf = get the texture value of blueNoise texture at point (d,1)**
 
-`	`<b>sample_color = vec4(color_tf.x, color_tf.y, color_tf.z, d<sup>2</sup>)</b>
+<b>sample_color = vec4(color_tf.x, color_tf.y, color_tf.z, d<sup>2</sup>)</b>
 
 We inserted this code in the report because we want to remark on the fact that we use d<sup>2</sup>, in that sense, we used it because if we use d, the results appeared to be more shiny and we couldn’t discard the valuable information of the volume.
 
@@ -132,7 +132,7 @@ We inserted this code in the report because we want to remark on the fact that w
 
 
 
-`             `**Figure 6: Volume with low quality and jittering**
+**Figure 6: Volume with low quality and jittering**
 **
 
 
@@ -166,7 +166,7 @@ The challenge while applying this is to get the Normal of the sample points beca
 
 
 
-`         `**Figure 8: Isosurfaces applied to the Teapot volume**
+**Figure 8: Isosurfaces applied to the Teapot volume**
 
 ![](Aspose.Words.5ba4161d-974f-427e-9313-b00db1bb7615.010.png)
 
@@ -186,19 +186,19 @@ The challenge while applying this is to get the Normal of the sample points beca
 
 In this lab, we applied a lot of stuff that needs to be controlled in order to have proper visualizations of the tasks applied. To do so, we have added different ImGUI features in the **application** and **material** files that help us in order to change the rendering parameters of our visualization. The parameters that we can find in our menu are the following ones:
 
-`	`Light controls
+Light controls
 
 Volume Selector
 
 Shader Selector (volume shader or isosurfaces shader)
 
-`	`Jittering Selector
+Jittering Selector
 
-`	`Transfer Function Selector
+Transfer Function Selector
 
-`            `Volume Clipping sliders for plane parameters
-
-`	`Isosurfaces density threshold![](Aspose.Words.5ba4161d-974f-427e-9313-b00db1bb7615.011.png)
+Volume Clipping sliders for plane parameters
+Isosurfaces density threshold
+![](Aspose.Words.5ba4161d-974f-427e-9313-b00db1bb7615.011.png)
 
 
 
